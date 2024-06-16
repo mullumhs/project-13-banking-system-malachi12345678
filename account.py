@@ -43,4 +43,16 @@ class Account:
     def set_account_balance(self , new_account_balance):
         if new_account_balance < 0:
             raise ValueError("balance must not be negative")
-        self._account_password = new_account_balance
+        self._account_balance = new_account_balance
+
+    def deposit(self , deposit_ammount):
+        if deposit_ammount <= 0:
+            raise ValueError("transfer must not be negative")
+        self._account_balance += deposit_ammount
+    
+    def withdraw(self , withdraw_ammount):
+        if withdraw_ammount > self._account_balance:
+            raise ValueError("withdraw cannot be more than balance")
+        self._account_balance -= withdraw_ammount
+
+
