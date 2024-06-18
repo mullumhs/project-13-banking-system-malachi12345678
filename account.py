@@ -6,11 +6,12 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 class Account:
-    def __init__(self , account_number , account_holder , account_password , account_balance):
-        self._account_number = account_number
-        self._account_holder = account_holder
-        self._account_password = account_password
-        self._account_balance = account_balance
+    def __init__(self , account_number , account_holder , account_password):
+        self._account_balance = 0        
+        self.set_account_holder(account_holder)
+        self.set_account_number(account_number)
+        self.set_account_password(account_password)
+        
 
     def get_account_number(self):
         return self._account_number

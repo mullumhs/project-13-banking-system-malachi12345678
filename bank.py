@@ -10,9 +10,15 @@ class Bank:
     def __init__(self):
         self.accounts = []
 
-    def add_account(self , account, acount_holder , account_password):
-        new_account = Account()
-        
-        
-        
+    def add_account(self , account_number , account_holder , account_password):
+        account = Account(  account_number , account_holder , account_password)
         self.accounts.append(account)
+
+    def print_account_list(self):
+        print(self.accounts)
+    
+
+
+manager = Bank()
+manager.add_account(123123 , "gregory", "eggory")
+manager.print_account_list()
