@@ -12,6 +12,9 @@ class Account:
         self.set_account_number(account_number)
         self.set_account_password(account_password)
         
+    def __str__(self):
+        return f"{self._account_number} {self._account_holder} {self._account_balance} {self._account_password}"
+    
 
     def get_account_number(self):
         return self._account_number
